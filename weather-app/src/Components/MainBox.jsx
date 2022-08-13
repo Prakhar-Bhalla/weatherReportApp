@@ -26,6 +26,10 @@ function MainBox({
     setDailyDetails({ ...dailyDetails, ...daily[index] });
   };
 
+  useEffect(() => {
+    setActiveBox({ ...activeBox, activeObject: null });
+  }, [daily])
+
   const toggleActiveBoxIdName = (index) => {
     if (activeBox.activeObject === activeBox.objects[index]) {
       return "box-active";
