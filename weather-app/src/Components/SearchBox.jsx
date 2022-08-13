@@ -21,7 +21,7 @@ function SearchBox({ setQuery, weatherData }) {
         <input
           onClick={() => setDivToggle(true)}
           onKeyDown={(event) => {
-            if(event.key == "Enter") {
+            if(event.key === "Enter") {
                 onSubmit();
             }
           }}
