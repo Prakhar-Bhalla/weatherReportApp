@@ -50,7 +50,7 @@ function MainBox({
               >
                 <div className="w-18">
                   <p>{item.title}</p>
-                  <p>{item.temp.toFixed()} °27°</p>
+                  <p>{item.temp.toFixed()}° 7°</p>
                 </div>
 
                 <img className="h-10" src={iconUrlFromCode(item.icon)} alt="" />
