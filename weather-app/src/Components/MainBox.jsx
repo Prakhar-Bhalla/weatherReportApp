@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { iconUrlFromCode } from "../Modules/weather";
 import { nanoid } from 'nanoid'
 
@@ -23,7 +23,6 @@ function MainBox({
 
   const toggleActiveBox = (index) => {
     setActiveBox({ ...activeBox, activeObject: activeBox.objects[index] });
-
     setDailyDetails({ ...dailyDetails, ...daily[index] });
   };
 
@@ -50,7 +49,7 @@ function MainBox({
               >
                 <div className="w-18">
                   <p>{item.title}</p>
-                  <p>{item.temp.toFixed()}° 7°</p>
+                  <p>{item.temp.toFixed()}° {(item.temp + Math.random() * 6).toFixed()}°</p>
                 </div>
 
                 <img className="h-10" src={iconUrlFromCode(item.icon)} alt="" />

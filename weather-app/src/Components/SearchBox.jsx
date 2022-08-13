@@ -10,6 +10,10 @@ function SearchBox({ setQuery, weatherData }) {
     setQuery({ q: input });
   };
 
+  const getCityToSearch = (city) => {
+    setQuery({ q : city})
+  }
+
   return (
     <div className="relative mt-5 w-full text-black md:mx-auto md:w-1/2">
       <div className="relative flex flex-row items-center w-full text-black">
@@ -43,6 +47,7 @@ function SearchBox({ setQuery, weatherData }) {
           setInput={setInput}
           input={input}
           setDivToggle={setDivToggle}
+          getCityToSearch={getCityToSearch}
         />
       ) : null}
     </div>
